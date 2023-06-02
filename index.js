@@ -43,7 +43,7 @@ async function getAIResponse(prompt) {
   const completion = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt,
-    max_tokens: 1024,
+    max_tokens: 20,
     temperature: 0.1,
   });
   return (completion?.data?.choices?.[0].text || 'AI 挂了').trim();
